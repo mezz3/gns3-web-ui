@@ -35,17 +35,9 @@
   </app-experimental-map>
 
   <!-- Project Titlebar -->
-  <div id="project-titlebar" [ngClass]="{ lightTheme: isLightThemeEnabled }">
-    <button
-      matTooltip="Open menu"
-      matTooltipClass="custom-tooltip"
-      mat-icon-button
-      class="gns3-button menu-button"
-      [matMenuTriggerFor]="mainMenu"
-    >
+  <div id="project-titlebar" [ngClass]="{ lightTheme: isLightThemeEnabled }">    
       <mat-icon *ngIf="!isLightThemeEnabled" svgIcon="gns3"></mat-icon>
       <mat-icon *ngIf="isLightThemeEnabled" svgIcon="gns3black"></mat-icon>
-    </button>
     <div class="project-titlebar-controls">
       <div *ngIf="!readonly" [ngClass]="{ lightTheme: isLightThemeEnabled }" class="menu-button-group primary-controls">
         <app-template [server]="server" [project]="project" (onNodeCreation)="onNodeCreation($event)"> </app-template>
